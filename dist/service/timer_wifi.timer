@@ -1,0 +1,12 @@
+[Unit]
+Description=Program untuk pengecekan jika wifi telah digunakan lebih dari 1 jam
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+OnCalendar=*:0/30
+Persistent=true
+Unit=timer_wifi.service
+
+[Install]
+WantedBy=timers.target

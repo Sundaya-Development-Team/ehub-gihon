@@ -1,0 +1,12 @@
+[Unit]
+Description=MPPT log data Timer
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+OnCalendar=*:0/4
+Persistent=true
+Unit=mppt_snmp.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Program untuk pengecekan jika wifi telah digunakan lebih dari 1 jam
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u timer_wifi.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target

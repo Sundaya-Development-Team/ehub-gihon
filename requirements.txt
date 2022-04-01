@@ -1,0 +1,8 @@
+pymodbus
+redis
+python-can
+modbus-tk
+uvloop
+twisted
+pytz
+gpiozero

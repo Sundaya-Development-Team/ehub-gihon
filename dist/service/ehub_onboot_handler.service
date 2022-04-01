@@ -1,0 +1,13 @@
+[Unit]
+Description=Onboot handler
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u on_boot_handler.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target

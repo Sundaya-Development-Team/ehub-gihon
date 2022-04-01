@@ -1,0 +1,13 @@
+[Unit]
+Description=Program untuk menyimpan data per 5 menit
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u store_log_data.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target

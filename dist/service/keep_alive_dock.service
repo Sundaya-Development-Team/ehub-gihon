@@ -1,0 +1,13 @@
+[Unit]
+Description=Keep Alive Dock (send pariodic high and low in pins)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u keep_alive_dock.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target

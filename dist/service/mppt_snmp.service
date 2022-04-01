@@ -1,0 +1,13 @@
+[Unit]
+Description=Mppt Logging Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u mppt_snmp.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target

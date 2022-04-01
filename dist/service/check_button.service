@@ -1,0 +1,15 @@
+[Unit]
+Description=Button check handler
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u check_button_handler.py
+WorkingDirectory=/var/lib/sundaya/ehub-bakti/
+StandardOutput=inherit
+StandardError=inherit
+Restart=on-failure
+RestartSec=10s
+User=root
+
+[Install]
+WantedBy=multi-user.target
